@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<table>
+      <tr>
+          <td><input id="kiemtra">điểm kiểm tra</td>
+      </tr>
+      <tr>
+          <td><input id="giuaky">điểm giữa kỳ</td>
+      </tr>
+      <tr>
+          <td><input id="cuoiky">điểm cuối kỳ</td>
+      </tr>
+    <tr>
+        <td><button onclick="ketqua()">Kết quả</button></td>
+    </tr>
+</table>
+<p id="lo"></p>
+<script>
+    function ketqua() {
+        let x = +document.getElementById('kiemtra').value;
+        let y = +document.getElementById('giuaky').value;
+        let z = +document.getElementById('cuoiky').value;
+        let c = (x + y + z)/3;
+        if (c >= 8) {
+            document.getElementById('lo').innerHTML = 'Giỏi';
+        } else{
+            if(c >= 6){
+                document.getElementById('lo').innerHTML = 'trung bình';
+            } else {
+                if( c >= 4){
+                    document.getElementById('lo').innerHTML = 'yếu';
+                } else {
+                    document.getElementById('lo').innerHTML = 'kém';
+                }
+            }
+        }
+    }
+</script>
+</body>
+</html>
