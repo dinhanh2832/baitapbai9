@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<table>
+    <tr>
+        <td>
+            <input id="soa" type="number" style="width: 30px; height: 20px">x<sup>2</sup>
+        </td>
+        <td>+</td>
+        <td>
+            <input id="sob" type="number" style="width: 30px; height: 20px">x
+        </td>
+        <td>+</td>
+        <td>
+            <input id="soc" type="number" style="width: 30px; height: 20px"> = 0
+        </td>
+    </tr>
+    <tr>
+        <td><button onclick="cham()">kết quả</button>:</td>
+        <td>
+            <p id="q"></p>;
+        </td>
+        <td>
+            <p id="u"></p>
+        </td>
+    </tr>
+</table>
+<script>
+    function cham() {
+        let a = +document.getElementById('soa').value;
+        let b = +document.getElementById('sob').value;
+        let c = +document.getElementById('soc').value;
+        if (a == 0) {
+            if (b == 0){
+                if (c == 0){
+                    document.getElementById('q').innerHTML= 'vô số nghiệm';
+                } else {
+                    document.getElementById('q').innerHTML= 'vô nghiệm';
+                }
+            } else {
+                let x = (-c)/b;
+                document.getElementById('q').innerHTML= x;
+            }
+        } else {
+            let delta = b**2 - 4*a*c;
+            if (delta < 0){
+                document.getElementById('q').innerHTML= 'vô nghiệm';
+            } else {
+                if ( delta == 0){
+                    let y = (-b)/(2*a);
+                    document.getElementById('q').innerHTML= y;
+                } else {
+                    let z = [(-b) + Math.sqrt(delta)]/(2*a);
+                    let k = [(-b) - Math.sqrt(delta)]/(2*a);
+                    document.getElementById('q').innerHTML= z
+                    document.getElementById('u').innerHTML= k;
+
+                }
+            }
+        }
+    }
+
+</script>
+</body>
+</html>

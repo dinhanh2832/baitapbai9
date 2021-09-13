@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p id="jz"></p>
+<script>
+    let a = parseInt(prompt('nhập vào biến a: '));
+    let b = parseInt(prompt('nhập vào biến b: '));
+    if (a == 0){
+        if ( b == 0 ) {
+            document.getElementById('jz').innerHTML= 'vô số nghiệm'
+        } else {
+            document.getElementById('jz').innerHTML= 'vô nghiệm'
+        }
+    } else {
+        let x = (-b)/a;
+        document.getElementById('jz').innerHTML= 'x= ' + x;
+    }
+
+</script>
+</body>
+</html>
