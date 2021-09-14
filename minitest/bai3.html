@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1 id="d"></h1>
+<script>
+    // câu lệnh nhận giá trị từ ô input là: document.getElementById().value
+</script>
+<table>
+    <tr>
+        <td><input id="a"></td>
+    </tr>
+    <tr>
+        <td><input id="b"></td>
+    </tr>
+    <tr>
+        <td><button onclick="cham()">kết quả</button></td>
+    </tr>
+</table>
+<script>
+    function cham() {
+        let a = +document.getElementById('a').value;
+        let b = +document.getElementById('b').value;
+        let s = a*b;
+        document.getElementById('d').innerHTML= s;
+    }
+</script>
+</body>
+</html>

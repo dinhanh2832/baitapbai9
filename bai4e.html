@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p id="l"></p>
+<table>
+    <tr>
+        <td><input id="input">số a</td>
+    </tr>
+    <tr>
+        <td><input id="input2">số b</td>
+    </tr>
+    <tr>
+        <td><input id="input3">số c</td>
+    </tr>
+    <tr>
+        <td><button onclick="cham()">kết quả</button></td>
+    </tr>
+</table>
+<script>
+    function cham() {
+        let x = +document.getElementById('input').value;
+        let y = +document.getElementById('input2').value;
+        let z = +document.getElementById('input3').value;
+        let tong = x + y + z;
+        let sosanh1 = x + y;
+        let sosanh2 = x + z;
+        let sosanh3 = y + z;
+        if ( tong > 0 ) {
+            if ( sosanh1 > 0 ) {
+                if ( sosanh2 > 0) {
+                    if( sosanh3 > 0){
+                        document.getElementById('l').innerHTML= 'là cạnh của 1 tam giác'
+                    } else {
+                        document.getElementById('l').innerHTML= ' không là cạnh của 1 tam giác';
+                    }
+                }
+            }
+        } else{
+            document.getElementById('l').innerHTML= ' không là cạnh của 1 tam giác';
+        }
+
+    }
+
+</script>
+</body>
+</html>

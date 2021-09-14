@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p id="l"></p>
+<table>
+    <tr>
+        <td><input id="input">số a</td>
+    </tr>
+    <tr>
+        <td><input id="input2">số b</td>
+    </tr>
+    <tr>
+        <td><button onclick="cham()">kết quả</button></td>
+    </tr>
+</table>
+<script>
+    function cham() {
+        let x = +document.getElementById('input').value;
+        let y = +document.getElementById('input2').value;
+        let bp =  x**2 ;
+        let mu =  x**y ;
+        document.getElementById('l').innerHTML= 'a^2 là: ' + bp + '  a^b là: ' + mu;
+
+    }
+
+</script>
+</body>
+</html>

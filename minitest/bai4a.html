@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p id="l"></p>
+<table>
+    <tr>
+        <td><input id="input"></td>
+    </tr>
+    <tr>
+        <td><button onclick="cham()">kết quả</button></td>
+    </tr>
+</table>
+<script>
+    function cham() {
+        let x = +document.getElementById('input').value;
+        let chuVi =  x*4 ;
+        let dTich =  x*x ;
+        document.getElementById('l').innerHTML= 'chu vi là: ' + chuVi + '  diện tích là: ' + dTich;
+
+    }
+
+</script>
+</body>
+</html>
