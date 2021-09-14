@@ -17,7 +17,9 @@
         <td><input id="input3">số c</td>
     </tr>
     <tr>
-        <td><button onclick="cham()">kết quả</button></td>
+        <td>
+            <button onclick="cham()">kết quả</button>
+        </td>
     </tr>
 </table>
 <script>
@@ -29,18 +31,22 @@
         let ss1 = x + y;
         let ss2 = y + z;
         let ss3 = z + x;
-        if ( tong > 0) {
-            if ( ss1 > z) {
-                if ( ss2 > x ) {
-                    if ( ss3 > y ) {
-                        document.getElementById('l').innerHTML= ' la canh 1 tam giac';
+        if (tong > 0) {
+            if (ss1 > z) {
+                if (ss2 > x) {
+                    if (ss3 > y) {
+                        document.getElementById('l').innerHTML = ' la canh 1 tam giac';
                     } else {
-                        document.getElementById('l').innerHTML= ' khong la canh 1 tam giac';
+                        document.getElementById('l').innerHTML = ' khong la canh 1 tam giac';
                     }
+                }else {
+                    document.getElementById('l').innerHTML = ' khong la canh 1 tam giac';
                 }
+            } else {
+                document.getElementById('l').innerHTML = ' khong la canh 1 tam giac';
             }
-        } else{
-            document.getElementById('l').innerHTML= ' khong la canh 1 tam giac';
+        } else {
+            document.getElementById('l').innerHTML = ' khong la canh 1 tam giac';
         }
     }
 

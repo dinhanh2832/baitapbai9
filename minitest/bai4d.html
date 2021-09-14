@@ -1,10 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <title>Title</title>
 </head>
 <body>
-$END$
+    <p id="l"></p>
+    <table>
+        <tr>
+            <td><input id="input">số năm</td>
+        </tr>
+        <tr>
+            <td><button onclick="cham()">kết quả</button></td>
+        </tr>
+    </table>
+    <script>
+        function cham() {
+            let x = document.getElementById('input').value;
+            let y =parseInt(x/100) + 1;
+            document.getElementById('l').innerHTML= x + ' là thế kỷ' + y
+
+        }
+    </script>
 </body>
 </html>
