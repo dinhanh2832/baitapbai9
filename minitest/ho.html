@@ -12,7 +12,7 @@
 <p>Nhập c:</p>
 <input type="text" id="c">
 <button id="check" onclick="tinhs()">Kiem tra</button>
-<p id="s">q</p>
+<p id="r"></p>
 <script>
     function tinhs() {
         let a = +document.getElementById('a').value;
@@ -26,13 +26,13 @@
         if (tamgiac) {
             s = 'là tam giác'
             if (vuong) {
-                s = 'là tam giac vuông'
+                s = 'là tam giác vuông';
             }
             if (can && vuong) {
-                s = 'là tam giác vuông cân'
+                s = 'là tam giác vuông cân';
             }
             if (can) {
-                s = 'là tam giác cân'
+                s = 'là tam giác can'
             }
             if (deu) {
                 s = 'là tam giác đều'
@@ -40,8 +40,8 @@
         } else {
             s = 'không là tam giác'
         }
+        document.getElementById('r').innerHTML=s;
     }
-    document.getElementById('s').innerHTML= s;
 </script>
 </body>
 </html>
