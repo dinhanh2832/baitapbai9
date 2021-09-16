@@ -6,20 +6,26 @@
 </head>
 <body>
 <script>
-    let x = 0;
+    let x = 1;
     let y = 1;
-    document.write(x + '<br>');
-    document.write(y + '<br>');
-    let count = 2;
+    let count = 0;
     let numBers = prompt(" nhập vào số số fbnx: ")
-    while ( count < numBers){
-        let z = x + y;
-        document.write(z + '<br>')
-        x = y;
-        y = z;
-        count++
+    while (count < numBers) {
+        let z = 0;
+        let fload = true;
+            z = x + y;
+            x = y;
+            y = z;
+            if (z % 5 == 0) {
+                fload = true;
+            } else {
+                fload = false
+            }
+            if (fload) {
+                document.write(z + '<br>');
+                count++;
+            }
     }
-
 </script>
 </body>
 </html>

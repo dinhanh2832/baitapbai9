@@ -5,6 +5,24 @@
     <title>Title</title>
 </head>
 <body>
-
+<input type="text" id="tienvay">tiền vay
+<input type="text" id="sothang">số tháng vay
+<input type="text" id="lai">lãi suất
+<button onclick="cham()">Kết quả</button>
+<p id="kq"></p>
+<SCRIPT>
+    function cham() {
+        let x = +document.getElementById('tienvay').value;
+        let y = +document.getElementById('sothang').value;
+        let z = +document.getElementById('lai').value;
+        for (let d = 1; d <= y; d++) {
+            let lai = x * z;
+            let sum = x + lai;
+            x = sum;
+            let lai2 = parseInt(lai)
+            document.getElementById('kq').innerHTML= lai2 + 'đồng';
+        }
+    }
+</SCRIPT>
 </body>
 </html>
