@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let x = 0;
+    let y = 1;
+    let sum = 1;
+    let count = 2;
+    let numBers = prompt(" nhập vào số số fbnx muốn tính tổng: ")
+    while (count < numBers) {
+        let z = x + y;
+        sum = sum + z;
+        x = y;
+        y = z;
+        count++
+    }
+    alert(sum)
+</script>
+</body>
+</html>

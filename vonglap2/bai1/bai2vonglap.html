@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let x = null;
+    do {
+        x = prompt('Nhập vào số nhiệt độ cơ thể: ');
+        if (x < 20) {
+            alert('tăng nhiệt độ lên')
+        } else {
+            if (x > 100) {
+                alert('giảm nhiệt độ xuống')
+            }
+        }
+    } while (x < 20 || x > 100)
+    alert(x)
+</script>
+</body>
+</html>
