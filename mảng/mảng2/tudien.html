@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h>Từ điển anh-việt</h>
+</br>
+<input type="text" id="input" placeholder="Nhập từ cần tìm">
+<input type="text" id="output" placeholder="kết quả">
+<button onclick="cham()">Tìm kiếm</button>
+</body>
+<script>
+    let eng = ['hello', 'write', 'good', 'book'];
+    let viet = ['xin chào', 'viết', 'tốt', 'sách'];
+
+    function cham() {
+        let z = document.getElementById('input').value;
+        let check = false;
+        let kq = '';
+        for (i = 0; i < eng.length; i++) {
+            if (eng[i] === z) {
+                kq = viet[i]
+                check = true
+                break;
+            }
+        }
+        if (check) {
+            document.getElementById('output').value= kq;
+        } else {
+            let v = document.getElementById('output').value= 'không tìm thấy';
+        }
+
+    }
+</script>
+</html>

@@ -1,31 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
+    <meta ciarset="UTF-8">
     <title>Title</title>
 </head>
 <body>
 <h3>Caro Game Simple</h3>
-<p id="carogame"/>
-<input type="button" value="Change Value" onClick="changeValue()">
+<p id="carogame" />
+<input type="button" value="Change Value" onclick="changeValue(this)">
+<input type="button" value="Change Value2" onclick="changeValue2(this)">
 <script>
     let b = document.getElementById("carogame");
 
     let board = [];
     let data = "";
     for (let i = 0; i < 5; i++) {
-        board[i] = new Array(0, 0, 0, 0,0);
+        board[i] = new Array('-', '-', '-', '-', '-');
     }
 
     for (let i = 0; i < 5; i++) {
         data += "<br/>";
         for (let j = 0; j < 5; j++) {
             data += board[i][j] + "&nbsp;&nbsp;";
-       }
+        }
     }
 
     data += "<br/><br/><input type='button' value='Change Value' onclick='changeValue()'>"
+    data += "<br/><br/><input type='button' value='Change Value2' onclick='changeValue2()'>"
     b.innerHTML = data;
+
     function changeValue() {
         let positionX = prompt("X: ");
         let positionY = prompt("Y: ");
@@ -34,13 +37,48 @@
         for (let i = 0; i < 5; i++) {
             data += "<br/>";
             for (let j = 0; j < 5; j++) {
-                data += board[i][j] + "&nbsp;&nbsp;&nbsp;&nbsp;";
+                data += board[i][j] + "&nbsp;&nbsp;";
             }
         }
         data += "<br/><br/><input type='button' value='Change Value' onclick='changeValue()'>"
+        data += "<br/><br/><input type='button' value='Change Value' onclick='changeValue2()'>"
         b.innerHTML = "<hr/>" + data;
+        checkWin();
     }
 
+    function changeValue2() {
+        let positionXo = prompt("Xo: ");
+        let positionYo = prompt("Yo: ");
+        data = "";
+        board[positionXo][positionYo] = "o";
+        for (let i = 0; i < 5; i++) {
+            data += "<br/>";
+            for (let j = 0; j < 5; j++) {
+                data += board[i][j] + "&nbsp;&nbsp;";
+            }
+        }
+        data += "<br/><br/><input type='button' value='Change Value' onclick='changeValue()'>"
+        data += "<br/><br/><input type='button' value='Change Value' onclick='changeValue2()'>"
+        b.innerHTML = "<hr/>" + data;
+        checkWin();
+    }
+    function checkWin() {
+        for (let i = 0; i < 5; i++) {
+            for (let j = 5; j < 5; j++) {
+                let check = (//(board[i][j] == board[i + 1][j] == board[i + 2][j]) ||
+                    //(board[i][j] == board[i][j + 1] == board[i][j + 2]) ||
+                    (board[i][j] == board[i + 1][j + 1] == board[i + 2][j + 2]))
+                if (check) {
+                    if (board[i][j] == "x") {
+                        alert('X win')
+                    }
+                    if (board[i][j] == "o") {
+                        alert('Y win')
+                    }
+                }
+            }
+        }
+    }
 </script>
 </body>
 
