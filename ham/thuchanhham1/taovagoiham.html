@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function proseccConfin(answer) {
+        let result = '';
+        if (answer){
+            result = "Execellent. WE'll play a nice game òf ches ";
+        } else {
+            result = "Maybe laster then."
+        }
+        return result;
+    }
+    let confimAnswer = confirm("Shall we play a game");
+    let theAnswe = proseccConfin(confimAnswer);
+    alert(theAnswe);
+</script>
+</body>
+</html>

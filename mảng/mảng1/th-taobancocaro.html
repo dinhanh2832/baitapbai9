@@ -6,7 +6,7 @@
 </head>
 <body>
 <h3>Caro Game Simple</h3>
-<p id="carogame" />
+<p id="carogame"/>
 <input type="button" value="Change Value" onclick="changeValue(this)">
 <input type="button" value="Change Value2" onclick="changeValue2(this)">
 <script>
@@ -33,7 +33,7 @@
         let positionX = prompt("X: ");
         let positionY = prompt("Y: ");
         data = "";
-        board[positionX][positionY] = "x";
+        board[positionX][positionY] = 'x';
         for (let i = 0; i < 5; i++) {
             data += "<br/>";
             for (let j = 0; j < 5; j++) {
@@ -50,7 +50,7 @@
         let positionXo = prompt("Xo: ");
         let positionYo = prompt("Yo: ");
         data = "";
-        board[positionXo][positionYo] = "o";
+        board[positionXo][positionYo] = 'o';
         for (let i = 0; i < 5; i++) {
             data += "<br/>";
             for (let j = 0; j < 5; j++) {
@@ -62,12 +62,11 @@
         b.innerHTML = "<hr/>" + data;
         checkWin();
     }
+
     function checkWin() {
         for (let i = 0; i < 5; i++) {
-            for (let j = 5; j < 5; j++) {
-                let check = (//(board[i][j] == board[i + 1][j] == board[i + 2][j]) ||
-                    //(board[i][j] == board[i][j + 1] == board[i][j + 2]) ||
-                    (board[i][j] == board[i + 1][j + 1] == board[i + 2][j + 2]))
+            for (let j = 0; j < 5; j++) {
+                let check = ((board[i][j] == board[i + 1][j] && board[i + 1][j] == board[i + 2][j]))
                 if (check) {
                     if (board[i][j] == "x") {
                         alert('X win')
