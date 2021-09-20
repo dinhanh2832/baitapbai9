@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>Bảng chuyển đổi</h1>
+foot:<input id="tofoot" type="number" oninput="footToMeter(this.value)" onchange="footToMeter(this.value)">
+meter:<input id="tometer" type="number" oninput="meterToFoot(this.value)" onchange="meterToFoot(this.value)">
+<p id="result">Kết quả:</p>
+<script>
+    function footToMeter(foot) {
+        foot = parseFloat(document.getElementById('tofoot').value);
+        let meter = foot * 0.305;
+        document.getElementById('result').innerHTML='Kết quả: ' + meter;
+    }
+
+    function meterToFoot(meter) {
+        meter = parseFloat(document.getElementById('tometer').value);
+        let foot = meter * 3.279;
+        document.getElementById('result').innerHTML= 'Kết quả: ' + foot;
+    }
+
+</script>
+</body>
+</html>
