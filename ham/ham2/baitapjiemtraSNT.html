@@ -5,6 +5,24 @@
     <title>Title</title>
 </head>
 <body>
-
+Kết quả:<p id="display"></p>
+<script>
+    function isPrime(number) {
+        let fload = false;
+        for (i = 2; i <= Math.sqrt(number); i++) {
+            if (number % i == 0) {
+                fload = true;
+            }
+        }
+        if (fload) {
+            document.getElementById('display').innerHTML = number + ' không phải số nguyên tố';
+        } else {
+            document.getElementById('display').innerHTML = number + 'là số nguyên tố';
+        }
+        return number;
+    }
+    let x = prompt("nhập vào số cần kiểm tra: ");
+    x = isPrime(x);
+</script>
 </body>
 </html>
