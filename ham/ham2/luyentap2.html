@@ -8,9 +8,10 @@
 <h1>Bài1</h1>
 <script>
     function squaring(num) {
-        let sqr = num**2;
+        let sqr = num ** 2;
         return sqr;
     }
+
     let x = prompt('Nhập vào số cần tính: ')
     let result = squaring(x);
     alert(result);
@@ -18,13 +19,15 @@
 <h2>Bài 2</h2>
 <script>
     function area(r) {
-        let result = Math.PI*r**3;
-        return r
+        let result = Math.PI * r ** 3;
+        return r;
     }
+
     function perimeter(r) {
-        let result = 2*Math.PI*r;
-        return r
+        let result = 2 * Math.PI * r;
+        return r;
     }
+
     let x = prompt('nhập vào bán kính');
     let resultArea = area(x);
     alert('diện tích hình tròn là: ' + resultArea);
@@ -35,10 +38,11 @@
 <script>
     function factorial(x) {
         let sum = 1;
-        for(i=x;i>0;i--){
-            sum = sum*i;
+        for (i = x; i > 0; i--) {
+            sum = sum * i;
         }
     }
+
     let z = prompt("nhập vào số cần tính: ");
     let result = factorial(z);
     alert('kết quả là: ' + result)
@@ -47,19 +51,103 @@
 <script>
     function checkNumber(x) {
         let fload = false;
-        if (x%1 === 0){
+        if (x % 1 === 0) {
             fload = true;
             alert(fload)
-        } else{
+        } else {
             alert(fload)
         }
     }
+
     let x = prompt('nhập ký tự cần kiểm tra: ');
     let y = checkNumber(x);
 </script>
 <h5>Bài 5</h5>
 <script>
-
+    function checkMin(a, b, c) {
+        let min = a;
+        if (b < a) {
+            min = b;
+        }
+        if (c < a) {
+            min = c
+        }
+        alert(min)
+    }
+    let x = prompt('nhập số a: ');
+    let y = prompt('nhập số b: ');
+    let z = prompt('nhập số c: ');
+    let min = checkMin(x,y,z) 
+</script>
+<h6>Bài 6</h6>
+<script>
+    function checkPositiveInteger(x) {
+        let fload = false;
+        if(x > 0){
+            fload = true;
+            alert(fload);
+        } else {
+            alert(fload);
+        }
+    }
+    let x = prompt('nhập vào số cần kiếm tra');
+    let result = checkPositiveInteger(x)
+</script>
+<h7>Bài 7</h7>
+<script>
+    let arr = [];
+    while (arr.length < 2){
+        let num = prompt();
+        arr.push(num);
+    }
+    function reverse(arr) {
+        let first = 0;
+        let last = arr.length - 1;
+        while (first < last) {
+            let b = arr[first];
+            arr[first] = arr[last];
+            arr[last] = b;
+            first++;
+            last--;
+        }
+    }
+    let arr2 = reverse(arr);
+    document.write(arr);
+</script>
+<h8>Bài 8</h8>
+<script>
+    let arr = [];
+    while (arr.length > 0){
+        let num = prompt();
+        arr.push(num);
+    }
+    function reverse(arr) {
+        let first = 0;
+        let last = arr.length - 1;
+        while (first < last) {
+            let b = arr[first];
+            arr[first] = arr[last];
+            arr[last] = b;
+            first++;
+            last--;
+        }
+    }
+    let arr2 = reverse(arr);
+    document.write(arr);
+</script>
+<h9>Bài 9</h9>
+<script>
+    let str = prompt();
+    let arr = str.split()
+    let random = prompt();
+    let count = 0;
+    for(i=0;i<arr.length;i++){
+        if(random == arr[i]){
+            count++;
+        } else {
+            alert('-1')
+        }
+    }
 </script>
 </body>
 </html>
