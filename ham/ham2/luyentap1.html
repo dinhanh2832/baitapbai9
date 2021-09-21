@@ -20,7 +20,36 @@
 </script>
 <h2>Bài 1</h2>
 <script>
-
+    function alertMessenger(parameters) {
+        parameters = alert('Heloooo');
+    }
+    let x = alertMessenger()
 </script>
+<h3>Bài 2</h3>
+<script>
+    function number(num) {
+        return num + 1;
+    }
+    let x = prompt();
+    let y = number(x);
+    alert(y)
+</script>
+<h4>bài 4</h4>
+<script>
+    function check(num1, num2) {
+        if (num1 < num2) {
+            let sum = +num1 + +num2;
+            alert(sum);
+        }
+        if (num1 > num2) {
+            alert(num1 + 'lớn hơn' + num2)
+        }
+    }
+
+    let x = prompt();
+    let y = prompt();
+    check(x, y);
+</script>
+
 </body>
 </html>

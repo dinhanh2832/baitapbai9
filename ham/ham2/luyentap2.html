@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>Bài1</h1>
+<script>
+    function squaring(num) {
+        let sqr = num**2;
+        return sqr;
+    }
+    let x = prompt('Nhập vào số cần tính: ')
+    let result = squaring(x);
+    alert(result);
+</script>
+<h2>Bài 2</h2>
+<script>
+    function area(r) {
+        let result = Math.PI*r**3;
+        return r
+    }
+    function perimeter(r) {
+        let result = 2*Math.PI*r;
+        return r
+    }
+    let x = prompt('nhập vào bán kính');
+    let resultArea = area(x);
+    alert('diện tích hình tròn là: ' + resultArea);
+    let resultPerimeter = perimeter(x);
+    alert('diện tích hình tròn là: ' + resultArea);
+</script>
+<h3>Bài 3</h3>
+<script>
+    function factorial(x) {
+        let sum = 1;
+        for(i=x;i>0;i--){
+            sum = sum*i;
+        }
+    }
+    let z = prompt("nhập vào số cần tính: ");
+    let result = factorial(z);
+    alert('kết quả là: ' + result)
+</script>
+<h4>Bài 4</h4>
+<script>
+    function checkNumber(x) {
+        let fload = false;
+        if (x%1 === 0){
+            fload = true;
+            alert(fload)
+        } else{
+            alert(fload)
+        }
+    }
+    let x = prompt('nhập ký tự cần kiểm tra: ');
+    let y = checkNumber(x);
+</script>
+<h5>Bài 5</h5>
+<script>
+
+</script>
+</body>
+</html>
