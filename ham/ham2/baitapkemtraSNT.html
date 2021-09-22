@@ -17,12 +17,15 @@ Kết quả:<p id="display"></p>
         if (fload) {
             document.getElementById('display').innerHTML = number + ' không phải số nguyên tố';
         } else {
-            document.getElementById('display').innerHTML = number + 'là số nguyên tố';
+            document.getElementById('display').innerHTML = number + ' là số nguyên tố';
         }
-        return number;
     }
     let x = prompt("nhập vào số cần kiểm tra: ");
-    x = isPrime(x);
+    if(x < 10000){
+        let Prime = isPrime(x)
+    }else {
+        alert('Ngoài phạm vi')
+    }
 </script>
 </body>
 </html>

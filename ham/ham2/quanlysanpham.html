@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>Neu Add product</h1>
+<table>
+    <tr>
+        <td id="name">
+            <select>
+                <option></option>
+                <option>Sony Xperia</option>
+                <option>Samsung Galaxy</option>
+                <option>Nokia 6</option>
+                <option>Xiaomi Redmi note 9</option>
+                <option>iPhone 11</option>
+                <option>Oppo A71</option>
+            </select>
+        </td>
+        <td>
+            <button onclick="addProduct()">Add</button>
+        </td>
+    </tr>
+</table>
+<h2>Display All Product</h2>
+<table id="result">
+    <tr>
+        <td>Product Name</td>
+        <td></td>
+        <td></td>
+    </tr>
+</table>
+<script>
+    let listProduct = [];
+    function addProduct() {
+        let nameProduct = document.getElementById('name').value;
+        listProduct.push(nameProduct);
+        document.getElementById('result').innerHTML += `<tr>
+				<td>${nameProduct}</td>
+				<td><button onclick="">Edit</button></td>
+				<td><button onclick="">Delete</button></td>
+				</tr>`
+    }
+</script>
+</body>
+</html>
