@@ -68,7 +68,9 @@
     }
 
     function editProduct(index) {
-        let product = listProduct[index];
+        let product = prompt('Nhập tên muốn sửa: ');
+        listProduct[index].nameProduct = product;
+        showProduct()
 
     }
 </script>
