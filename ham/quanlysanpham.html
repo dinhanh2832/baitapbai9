@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>Neu Add product</h1>
+<table >
+    <tr id="table">
+        <td>
+            <select name="Product" id="name">
+                <option value=""></option>
+                <option value="Soni Experia">Soni Experia</option>
+                <option value="Samsung Galaxy">Samsung Galaxy</option>
+                <option value="Nokia 6">Nokia 6</option>
+                <option value="Xiaomi Redmi note 9">Xiaomi Redmi note 9</option>
+                <option value="iPhone 11">iPhone 11</option>
+                <option value="Oppo A71">Oppo A71</option>
+            </select>
+        </td>
+        <td>
+            <button onclick="addProduct()">Add</button>
+        </td>
+    </tr>
+</table>
+<h2>Display All Product</h2>
+<table>
+    <tr>
+        <td>No</td>
+        <td>Product Name</td>
+    </tr>
+</table>
+<table id="result">
+    <tr>
+        <td></td>
+        <td></td>
+    </tr>
+</table>
+
+<script>
+    let listProduct = [];
+    let count = 0;
+
+    function showProduct() {
+        document.getElementById('result').innerHTML = '';
+        for (i = 0; i < listProduct.length; i++) {
+            document.getElementById('result').innerHTML += `<tr>
+				<td>${i + 1}</td>
+				<td id="az">${listProduct[i].nameProduct}</td>
+				<td><button onclick="editProduct(${i})">Edit</button></td>
+				<td><button onclick="deleteProduct(${i})">Delete</button></td>
+				</tr>`
+        }
+    }
+    function addProduct() {
+        let namepro = document.getElementById('name').value;
+        let product = {'nameProduct': namepro};
+
+        listProduct.push(product);
+
+        showProduct()
+    }
+
+    function deleteProduct(index) {
+        listProduct.splice(index, 1);
+        showProduct()
+    }
+
+    function editProduct(index) {
+        let product = listProduct[index];
+
+    }
+</script>
+</body>
+</html>
