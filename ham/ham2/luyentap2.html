@@ -141,18 +141,21 @@
     let arr = str.split('');
     let random = prompt();
     let arr2 = random.split('');
-    let count = 0;
-    let fload = false;
-    for (i = 0; i < arr.length; i++) {
-        if (arr2 == arr[i]) {
-            fload = true
-            count++;
+    function character(arr,ramdom) {
+        let count = 0;
+        let fload = false;
+        for (i = 0; i < arr.length; i++) {
+            if (random == arr[i]) {
+                fload = true
+                count++;
+            }
+        }if (fload) {
+            alert(count)
+        } else {
+            alert('-1')
         }
-    }if (fload) {
-        alert(count)
-    } else {
-        alert('-1')
     }
+    character(arr,random)
 </script>
 </body>
 </html>
